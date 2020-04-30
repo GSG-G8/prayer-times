@@ -15,7 +15,7 @@ const Prayer = () => {
   };
   useEffect(() => {
     if (city.trim()) {
-      axios.get(`https://cors-anywhere.herokuapp.com/https://muslimsalat.com/${city.trim()}/daily.json?key=fd53a69625960a5e1e516f169c0fd1e0`)
+      axios.get(`https://cors-anywhere.herokuapp.com/https://muslimsalat.com/${city}/daily.json?key=fd53a69625960a5e1e516f169c0fd1e0`)
         .then((res) => setData(res))
         .catch((err) => setError(err));
     }
