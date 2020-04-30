@@ -22,15 +22,22 @@ const Prayer = () => {
           `https://cors-anywhere.herokuapp.com/https://muslimsalat.com/${city}/daily.json?key=fd53a69625960a5e1e516f169c0fd1e0`
         )
         .then((res) => {
-          setData(res.data);
-          setLoading(false);
+          if (res.data.status_code === 0) {
+            setError("There is no such city");
+          } else {
+            setData(res.data);
+            setLoading(false);
+            setError("");
+          }
         })
-        .catch((err) => setError(err));
+        .catch((err) => setError(err.message));
     }
   }, [city]);
   return (
     <div className="container">
       <div className="card">
+        <h1 className="title">Prayer Times App</h1>
+        <span className="error-msg">{error}</span>
         <div className="search">
           <input
             className="search__input"
@@ -43,7 +50,6 @@ const Prayer = () => {
             Search
           </button>
         </div>
-        {/* {error ? <h1>THere is No Data</h1> : <ShowData  data = 'data'/>} */}
         {!loading ? <ShowPrayers data={data} /> : <h3>loading...</h3>}
       </div>
     </div>
