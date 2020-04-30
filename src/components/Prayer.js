@@ -39,8 +39,11 @@ const Prayer = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-        <button className="search-btn" type="submit" onClick={handleOk}>Search</button>
+          <button className="search-btn" type="submit" onClick={handleOk}>
+            Search
+          </button>
         </div>
+        {/* {error ? <h1>THere is No Data</h1> : <ShowData  data = 'data'/>} */}
         {!loading ? <ShowPrayers data={data} /> : <h3>loading...</h3>}
       </div>
     </div>
