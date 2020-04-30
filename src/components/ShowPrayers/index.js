@@ -1,4 +1,7 @@
 import React from "react";
+
+import Clock from "../Clock";
+
 import "./style.css";
 const ShowPrayers = ({ data, loading }) => {
   return (
@@ -6,7 +9,7 @@ const ShowPrayers = ({ data, loading }) => {
       <div className="today">
         <div className="time">
           <div className="time__wrap">
-            <p>11:22 pm</p>
+            <Clock />
           </div>
         </div>
         <div className="location">
