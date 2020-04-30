@@ -32,7 +32,6 @@ const Prayer = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button onClick={handleOk}>Search</button>
-      {!loading && <ShowTimes data={data} />}
     </div>
   );
 };
