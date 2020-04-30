@@ -11,7 +11,7 @@ const Prayer = () => {
     setSearchTerm("");
   };
   useEffect(() => {
-    axios(`https://muslimsalat.com/${city}/daily.json?key=fd53a69625960a5e1e516f169c0fd1e0`)
+    axios(`https://cors-anywhere.herokuapp.com/https://muslimsalat.com/${city}/daily.json?key=fd53a69625960a5e1e516f169c0fd1e0`)
       .then((res) => setData(res))
       .catch((err) => console.log(err));
   }, [city]);
