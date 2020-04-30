@@ -25,7 +25,7 @@ const Prayer = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <button onClick={handleOk}>Search</button>
-      {error ? <h1>THere is No Data</h1> :/* <ShowData  data = 'data'/>*/}
+      {/* {error ? <h1>THere is No Data</h1> : <ShowData  data = 'data'/>} */}
     </div>
   );
 };
