@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const Prayer = () => {
-  const [city, cityState] = useState("gaza strip");
+  const [city, setCity] = useState("gaza strip");
   const [searchTerm, setSearchTerm] = useState("");
   const [data, setData] = useState("");
   const [error, setError] = useState(null);
 
   const handleOk = () => {
-    cityState(searchTerm);
+    setCity(searchTerm);
     setSearchTerm("");
   };
   useEffect(() => {
-    axios(`https://cors-anywhere.herokuapp.com/https://muslimsalat.com/${city}/daily.json?key=fd53a69625960a5e1e516f169c0fd1e0`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://muslimsalat.com/${city.trim()}/daily.json?key=fd53a69625960a5e1e516f169c0fd1e0`)
       .then((res) => setData(res))
       .catch((err) => setError(err));
   }, [city]);
