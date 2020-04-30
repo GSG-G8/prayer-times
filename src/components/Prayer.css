@@ -24,6 +24,15 @@ html {
   border-radius: 22px;
 }
 
+.title{
+  text-align: center;
+  font-family:sans-serif;
+  font-size: 60px;
+}
+.error-msg{
+  color: red;
+}
+
 .search{
   display: flex;
   flex-wrap: wrap;
