@@ -6,7 +6,7 @@ Get accurate Islamic Prayer Times to your location instantly and for all cities 
 we deply our App on NETLIFY
 
 [check it out
-](https://https://prayer-times-20.netlify.app)
+](https://prayer-times-20.netlify.app)
 
 ## User Stories 
 
