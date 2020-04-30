@@ -8,13 +8,17 @@ const Prayer = () => {
   const [error, setError] = useState(null);
 
   const handleOk = () => {
-    setCity(searchTerm);
+    if (searchTerm.trim()) {
+      setCity(searchTerm);
+    }
     setSearchTerm("");
   };
   useEffect(() => {
-    axios.get(`https://cors-anywhere.herokuapp.com/https://muslimsalat.com/${city.trim()}/daily.json?key=fd53a69625960a5e1e516f169c0fd1e0`)
-      .then((res) => setData(res))
-      .catch((err) => setError(err));
+    if (city.trim()) {
+      axios.get(`https://cors-anywhere.herokuapp.com/https://muslimsalat.com/${city.trim()}/daily.json?key=fd53a69625960a5e1e516f169c0fd1e0`)
+        .then((res) => setData(res))
+        .catch((err) => setError(err));
+    }
   }, [city]);
   return (
     <div>
