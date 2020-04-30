@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://www.askideas.com/media/46/The-Blue-Mosque-Istanbul-During-Sunset.jpg);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 22px;
+}
+
+.search{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+.search__input {
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  line-height: 22px;
+  border:2px solid white;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+
+.search__input:focus{
+  border: 2px solid #000000;
+  line-height: 22px;
+  transition: all 0.3s;
+  color: rgb(95, 95, 95);
+
+
+}
+
+.search-btn {
+  position: absolute;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100px;
+  background:rgba(47, 46, 46, 0.952);
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:14px;
+  transition: all 0.3s;
+  width:200px;
+  display:inline-block;
+  overflow: auto;
+  white-space: nowrap;
+  margin:0px auto;
+
+}
+.search-btn:hover {
+   background:rgb(0, 0, 0);
+   }
+
