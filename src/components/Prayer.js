@@ -36,7 +36,7 @@ const Prayer = () => {
   return (
     <div className="container">
       <div className="card">
-        <h1 className="title">Prayer Times App</h1>
+        <h1 className="title">𝓟𝓻𝓪𝔂𝓮𝓻 𝓣𝓲𝓶𝓮𝓼</h1>
         <span className="error-msg">{error}</span>
         <div className="search">
           <input
